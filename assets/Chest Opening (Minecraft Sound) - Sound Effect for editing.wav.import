@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgdubcf4h7no0"
+path="res://.godot/imported/Chest Opening (Minecraft Sound) - Sound Effect for editing.wav-38db355d131c122fad9e7896bee79d3a.sample"
+
+[deps]
+
+source_file="res://assets/Chest Opening (Minecraft Sound) - Sound Effect for editing.wav"
+dest_files=["res://.godot/imported/Chest Opening (Minecraft Sound) - Sound Effect for editing.wav-38db355d131c122fad9e7896bee79d3a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

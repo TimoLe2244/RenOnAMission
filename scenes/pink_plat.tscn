@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://g6av845mkqp5"]
+
+[ext_resource type="Texture2D" uid="uid://l1a0qfhlslh3" path="res://assets/Recolor 16x16.png" id="1_c5hny"]
+[ext_resource type="Script" path="res://scripts/pink_plat.gd" id="1_g1xnd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ki4b2"]
+size = Vector2(36, 8)
+
+[node name="PinkPlat" type="AnimatableBody2D"]
+script = ExtResource("1_g1xnd")
+
+[node name="Recolor16x16" type="Sprite2D" parent="."]
+position = Vector2(0, -5)
+scale = Vector2(0.75, 0.5)
+texture = ExtResource("1_c5hny")
+region_enabled = true
+region_rect = Rect2(15.7567, 175.859, 48.5119, 16.3831)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_ki4b2")
+one_way_collision = true
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(-1, -5)
+target_position = Vector2(-20, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(1, -5)
+target_position = Vector2(20, 0)

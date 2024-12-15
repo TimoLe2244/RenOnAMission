@@ -1,0 +1,241 @@
+[gd_scene load_steps=10 format=3 uid="uid://c5mtuxshqf711"]
+
+[ext_resource type="Texture2D" uid="uid://d33itu1t51lcq" path="res://assets/Sushi/Sushi tray 2.png" id="1_jjhrf"]
+[ext_resource type="Texture2D" uid="uid://bggl8qxkwwxy7" path="res://assets/Sushi/Onigiri.png" id="2_w5i5i"]
+[ext_resource type="Texture2D" uid="uid://l3tr4vckj4fc" path="res://assets/Sushi/Nigiri 1.png" id="3_6c732"]
+[ext_resource type="Texture2D" uid="uid://chaipqbf72s28" path="res://assets/Sushi/Nigiri 2.png" id="4_a5yuv"]
+[ext_resource type="Texture2D" uid="uid://d1uefrxuslxdk" path="res://assets/Sushi/Sushi roll 6.png" id="5_t4ksq"]
+[ext_resource type="Texture2D" uid="uid://c81sl1m0ph8kw" path="res://assets/Sushi/Sushi roll 2.png" id="6_1m136"]
+
+[sub_resource type="Animation" id="Animation_3j8nj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Shrimp A:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Salmon B:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/Salmon A:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/Rice Roll:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/Seaweed Roll:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/Onigiri:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/Shrimp B:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vhdg4"]
+resource_name = "on_interact"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Onigiri:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Shrimp B:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/Shrimp A:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/Salmon B:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.2, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/Salmon A:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.6, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/Rice Roll:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2, 2.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/Seaweed Roll:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.4, 2.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_68jdn"]
+_data = {
+"RESET": SubResource("Animation_3j8nj"),
+"on_interact": SubResource("Animation_vhdg4")
+}
+
+[node name="Sushi Platter" type="Node2D"]
+position = Vector2(-0.33371, 0)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(1.92081, 0.16095)
+scale = Vector2(0.5, 0.5)
+
+[node name="SushiTray2" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("1_jjhrf")
+
+[node name="Onigiri" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-5.64684, -20.2955)
+texture = ExtResource("2_w5i5i")
+
+[node name="Salmon B" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(16.4753, -12.0694)
+texture = ExtResource("3_6c732")
+
+[node name="Shrimp B" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-15.2181, -10.6797)
+texture = ExtResource("4_a5yuv")
+
+[node name="Salmon A" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(5.83688, -3.21426)
+texture = ExtResource("3_6c732")
+
+[node name="Shrimp A" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-24.3803, -2.57505)
+texture = ExtResource("4_a5yuv")
+
+[node name="Rice Roll" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(35.0454, -14.4762)
+scale = Vector2(1, 0.851181)
+texture = ExtResource("5_t4ksq")
+
+[node name="Seaweed Roll" type="Sprite2D" parent="Node2D"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(27.0375, -5.71011)
+scale = Vector2(1, 0.880945)
+texture = ExtResource("6_1m136")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_68jdn")
+}

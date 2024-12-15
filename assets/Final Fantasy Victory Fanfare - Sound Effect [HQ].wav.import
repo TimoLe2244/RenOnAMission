@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dgyc3iuji3spj"
+path="res://.godot/imported/Final Fantasy Victory Fanfare - Sound Effect [HQ].wav-ca3cbd5c6992c1a25435e39f7997e0a8.sample"
+
+[deps]
+
+source_file="res://assets/Final Fantasy Victory Fanfare - Sound Effect [HQ].wav"
+dest_files=["res://.godot/imported/Final Fantasy Victory Fanfare - Sound Effect [HQ].wav-ca3cbd5c6992c1a25435e39f7997e0a8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

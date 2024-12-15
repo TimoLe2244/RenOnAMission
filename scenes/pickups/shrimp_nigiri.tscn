@@ -1,0 +1,150 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0ts64bifqu2s"]
+
+[ext_resource type="Texture2D" uid="uid://chaipqbf72s28" path="res://assets/Sushi/Nigiri 2.png" id="1_jjimh"]
+[ext_resource type="Script" path="res://scripts/shrimp_nigiri.gd" id="1_smouy"]
+[ext_resource type="AudioStream" uid="uid://cbd1vnmdwbrow" path="res://assets/brackeys_platformer_assets/sounds/coin.wav" id="2_7j82c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jddsk"]
+radius = 3.60143
+height = 20.2043
+
+[sub_resource type="Animation" id="Animation_w7qju"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Nigiri2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ct1w4"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Nigiri2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.0959244, 0.104618), Vector2(0.0959244, -1.96011), Vector2(0.0959244, 1.52043), Vector2(0.0959244, 0.0456257)]
+}
+
+[sub_resource type="Animation" id="Animation_x0jyn"]
+resource_name = "pickup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Nigiri2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v8bg7"]
+_data = {
+"RESET": SubResource("Animation_w7qju"),
+"idle": SubResource("Animation_ct1w4"),
+"pickup": SubResource("Animation_x0jyn")
+}
+
+[node name="ShrimpNigiri" type="Area2D"]
+position = Vector2(-0.0470047, -0.313992)
+collision_mask = 3
+script = ExtResource("1_smouy")
+
+[node name="Nigiri2" type="Sprite2D" parent="."]
+position = Vector2(0.0959244, 1.18569)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_jjimh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_jddsk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_7j82c")
+volume_db = -15.0
+bus = &"SFX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_v8bg7")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

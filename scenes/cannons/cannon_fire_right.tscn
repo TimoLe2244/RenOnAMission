@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://b12d7to58jdcq"]
+
+[ext_resource type="Texture2D" uid="uid://d0ddq74nio8hq" path="res://assets/08-Box/Idle.png" id="1_lh12b"]
+[ext_resource type="PackedScene" uid="uid://chhrxgxjjljor" path="res://scenes/killzone.tscn" id="2_cj7hf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5kg0"]
+size = Vector2(21, 16)
+
+[sub_resource type="Animation" id="Animation_uhyrx"]
+resource_name = "movement"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2, 0), Vector2(472, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 6.28319, 12.5664]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hfo6n"]
+_data = {
+"movement": SubResource("Animation_uhyrx")
+}
+
+[node name="cannon_fire_right" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+texture = ExtResource("1_lh12b")
+flip_h = true
+
+[node name="Killzone" parent="Sprite2D" instance=ExtResource("2_cj7hf")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Killzone"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_j5kg0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hfo6n")
+}
+autoplay = "movement"

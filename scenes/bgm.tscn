@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2yhowynra0kw"]
+
+[ext_resource type="AudioStream" uid="uid://dtkpoa4gavhqp" path="res://assets/floating-cat-michael-grubb-main-version-24551-01-53.mp3" id="1_mq1fd"]
+
+[node name="BGM" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_mq1fd")
+volume_db = -25.0
+autoplay = true
+bus = &"BGM"
